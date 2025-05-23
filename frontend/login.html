@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - Mentax GPT</title>
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="auth.js" defer></script>
+  <style>
+    body {
+        min-height: 100vh;
+        margin: 0;
+        font-family: 'Segoe UI', Arial, sans-serif;
+        background: linear-gradient(135deg, #ff0000 0%, #00ff00 60%, #000 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .login-container {
+        background: rgba(0,0,0,0.85);
+        border-radius: 18px;
+        box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+        padding: 2.5rem 2rem 2rem 2rem;
+        width: 350px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .login-title {
+        background: linear-gradient(90deg, #ff0000, #00ff00, #dde530);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 1.5rem;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+    form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1.1rem;
+    }
+    input[type="email"], input[type="password"] {
+        padding: 0.7rem 1rem;
+        border: none;
+        border-radius: 8px;
+        background: rgba(255,255,255,0.08);
+        color: #fff;
+        font-size: 1rem;
+        transition: background 0.2s;
+    }
+    input[type="email"]:focus, input[type="password"]:focus {
+        background: rgba(255,255,255,0.18);
+        outline: 2px solid #00ff00;
+    }
+    button[type="submit"] {
+        margin-top: 0.5rem;
+        padding: 0.7rem 1rem;
+        border: none;
+        border-radius: 8px;
+        background: linear-gradient(90deg, #ff0000, #00ff00, #000);
+        color: #fff;
+        font-size: 1.1rem;
+        font-weight: bold;
+        cursor: pointer;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        transition: background 0.3s, transform 0.2s;
+    }
+    button[type="submit"]:hover {
+        background: linear-gradient(90deg, #00ff00, #ff0000, #000);
+        transform: translateY(-2px) scale(1.03);
+    }
+    .signup-link {
+        margin-top: 1.2rem;
+        color: #00ff00;
+        text-decoration: none;
+        font-size: 1rem;
+        transition: color 0.2s;
+    }
+    .signup-link:hover {
+        color: #ff0000;
+        text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2 class="login-title">Login</h2>
+    <form id="login-form">
+      <input type="email" id="login-email" placeholder="Email" required />
+      <input type="password" id="login-password" placeholder="Password" required />
+      <button type="submit">Login</button>
+    </form>
+    <a href="signup.html" class="signup-link">Don't have an account? Sign Up</a>
+  </div>
+</body>
+</html>

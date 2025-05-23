@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentax GPT</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>🧠 Mentax GPT</h1>
+    </header>
+    <div class="container">
+        <aside id="chat-history-sidebar" class="flex flex-col h-full bg-gray-800 p-4">
+            <div class="chat-history-header flex justify-between items-center mb-4">
+                <h2 class="text-white text-lg font-semibold">Chat History</h2>
+                <button id="new-chat-btn" class="text-sm font-bold bg-gray-600 px-2 py-1 rounded hover:bg-gray-700">+ New Chat</button>
+            </div>
+            <ul id="chat-history-list" class="flex-grow space-y-2">
+                <!-- Conversation titles will appear here. Each li can have a border at the bottom. -->
+                <!-- Example static item: -->
+                <!-- <li class="border-b border-gray-600 pb-1 text-sm text-white">Hello, greet in sho...</li> -->
+            </ul>
+            <div>
+                <button id="logout-btn" class="w-full py-2 bg-red-600 hover:bg-red-700 rounded text-white font-bold mt-4">Logout</button>
+            </div>
+        </aside>
+        <main>
+            <div id="chat-main" class="flex flex-col h-full">
+                <div id="chat-box" class="chat-box flex-1 overflow-y-auto">
+                    <div id="welcome-msg" class="text-gray-400 italic p-4 text-lg text-center bg-gray-900 rounded-md my-8 mx-auto max-w-xl shadow-lg">
+                        👋 Hi, I’m your <span class="font-semibold text-blue-300">Mental Health Buddy</span>.<br>What’s on your mind today?
+                    </div>
+                    <!-- Chat messages will be appended here by script.js -->
+                </div>
+                <div class="input-area">
+                    <!-- Text input for message -->
+                    <input type="text" id="user-input" placeholder="Type your message here...">
+                    <!-- Voice icon placed between input and send button -->
+                    <button id="voice-btn" onclick="startVoice()">🎙️</button>
+                    <!-- Send button replaced with an icon -->
+                    <button id="send-btn" onclick="sendMessage()">📤</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <!-- Include script.js at the end of the body -->
+    <script src="script.js"></script>
+</body>
+</html>

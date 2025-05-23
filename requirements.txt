@@ -1,0 +1,30 @@
+# Core Python Packages
+Flask==3.0.0
+Flask-Cors==4.0.0  # Enables frontend-backend communication
+fastapi==0.95.2
+uvicorn==0.21.1
+python-dotenv==1.0.0  # Environment variable management
+
+# Machine Learning & NLP
+langchain==0.1.12
+langchain-community==0.0.31
+langchain-groq==0.1.2
+transformers==4.38.2  # Required for LLM model processing
+sentence-transformers==2.2.2  # Embeddings for vector search
+torch==2.2.0  # Required for ML models
+
+# Database (MongoDB)
+pymongo==4.6.1  # MongoDB driver for Python
+
+# Vector Database (ChromaDB)
+chromadb==0.4.24
+
+# Speech-to-Text & Text-to-Speech (Frontend Voice Interaction)
+SpeechRecognition==3.10.0  # Converts user speech to text
+pyttsx3==2.90  # Converts text responses to speech
+
+# Gradio (For Local Testing)
+gradio==4.15.0
+
+# Other Utilities
+requests==2.31.0  # API requests handling
