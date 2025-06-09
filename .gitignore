@@ -1,0 +1,24 @@
+# Exclude Python virtual environment
+venv/
+
+# Exclude Python cache files
+__pycache__/
+
+# Exclude VS Code settings
+.vscode/
+
+# Exclude Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Exclude vector database files (if you don’t need to version them)
+chroma_db/
+
+# Exclude sensitive environment variables
+.env
+
+# Exclude OS-specific files
+.DS_Store
+Thumbs.db
+
+# Optionally exclude old package lists (if not needed)
+old_packages.txt
